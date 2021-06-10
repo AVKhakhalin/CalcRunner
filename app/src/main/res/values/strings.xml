@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CalcRunner</string>
+    <string name="run_button_text">Запустить калькулятор</string>
+    <string name="run_settings_button_text">Запустить настройки калькулятора</string>
 </resources>
