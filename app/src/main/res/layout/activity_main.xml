@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/_label_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Приложение для запуска калькулятора"
         android:textSize="@dimen/label_text_size"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/_run_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/_run_button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/_run_button"
@@ -25,10 +25,10 @@
         android:layout_height="wrap_content"
         android:text="@string/run_button_text"
         android:textSize="@dimen/run_button_text_size"
-        app:layout_constraintTop_toBottomOf="@id/_label_text"
+        app:layout_constraintBottom_toTopOf="@id/_run_settings_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/_run_settings_button"/>
+        app:layout_constraintTop_toBottomOf="@id/_label_text" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/_run_settings_button"
@@ -36,9 +36,9 @@
         android:layout_height="wrap_content"
         android:text="@string/run_settings_button_text"
         android:textSize="@dimen/run_button_text_size"
-        app:layout_constraintTop_toBottomOf="@id/_run_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/_run_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
